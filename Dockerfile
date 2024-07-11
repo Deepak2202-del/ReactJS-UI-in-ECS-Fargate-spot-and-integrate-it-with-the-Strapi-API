@@ -3,7 +3,7 @@ ARG PUBLIC_IP=''
 WORKDIR /root
 RUN apt update && \
     apt install vim -y && \
-    git clone https://github.com/maheshryali1122/strapi-frontend-practice-711.git
+    git clone https://github.com/Deepak2202-del/ReactJS-UI-in-ECS-Fargate-spot-and-integrate-it-with-the-Strapi-API.git
 ENV NODE_OPTIONS="--openssl-legacy-provider"
 WORKDIR /root/strapi-frontend-practice-711
 RUN sed -i 's|http://ipaddress:1337|http://'$PUBLIC_IP':1337|' /root/strapi-frontend-practice-711/src/App.js
